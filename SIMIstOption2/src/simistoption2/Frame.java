@@ -21,8 +21,8 @@ public class Frame extends JFrame {
         
         
         JFrame f = new JFrame();
-        MainFloor mf = new MainFloor();
-        f.add(mf);
+        StartPane sP = new StartPane();
+        f.add(sP);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(1200,700);

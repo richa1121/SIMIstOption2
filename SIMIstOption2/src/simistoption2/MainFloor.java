@@ -14,8 +14,13 @@ import javax.swing.JPanel;
  */
 public class MainFloor extends JPanel {
     
+    private JButton Start; 
+    
+    
     
     public MainFloor(){
+        
+        
         
         JLabel j = new JLabel("fkdsflsdl");
         this.add(j);
