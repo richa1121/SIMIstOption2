@@ -15,6 +15,8 @@ public class SIMIstOption2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //suzanne
+       
         // TODO code application logic here
     }
     
