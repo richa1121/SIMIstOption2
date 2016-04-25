@@ -16,7 +16,7 @@ public class SIMIstOption2 {
      */
     public static void main(String[] args) {
         //suzanne
-       
+       Frame f1 =new Frame();
         // TODO code application logic here
     }
     
