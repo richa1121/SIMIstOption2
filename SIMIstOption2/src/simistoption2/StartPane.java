@@ -14,9 +14,10 @@ import javax.swing.JPanel;
  *
  * @author sns5408
  */
-public class StartPane extends JPanel implements ActionListener{
+public class StartPane extends JPanel{
     
     public JButton Start; 
+   
     public StartPane(){
        
         
@@ -26,19 +27,10 @@ public class StartPane extends JPanel implements ActionListener{
         add(Start);
         
         
-      Start.addActionListener(this);
+    
        
         
         
     }
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                this.setVisible(false);
-                 MainFloor mf = new MainFloor();
-                 mf.setVisible(true);
-    
-    
-    
-}
  }
 

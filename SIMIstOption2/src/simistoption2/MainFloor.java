@@ -1,9 +1,11 @@
+package simistoption2;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package views;
+
 
 
 import java.awt.Dimension;
@@ -22,29 +24,28 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 
-/**
- *
- * @author matthewtucker
- */
-public class MainFloor extends JPanel implements ActionListener, KeyListener{
+
+public class MainFloor extends JPanel //implements ActionListener, KeyListener
+{
+
 
    
     private Timer refreshTimer;
    private Point room1, room2, room3;
   
-    private player player1;
+    //private player player1;
     private JButton test;
     
 
     public MainFloor() {
        test=new JButton("test");
        add(test);
-        this.addKeyListener(this);
+        //this.addKeyListener(this);
         setFocusable(true);
         requestFocusInWindow();
     }
 
-    public void paintComponent(Graphics g) {
+   /* public void paintComponent(Graphics g) {
         super.paintComponent(g);
  
 
@@ -112,5 +113,6 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener{
             move();
             g.drawRect(x, y, 30, 30);
         }
-    }
+    */
+    //}
 }

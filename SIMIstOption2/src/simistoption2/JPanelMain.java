@@ -5,16 +5,35 @@
  */
 package simistoption2;
 
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 /**
  *
  * @author sns5408
  */
-public class JPanelMain extends JPanel {
+public class JPanelMain extends JPanel implements ActionListener{
+    
+    StartPane s1;
+    MainFloor m1;
+    Cybertorium c1;
     
     
     public JPanelMain(){
+        super();
+        
+         setLayout(new BorderLayout());
+        s1 = new StartPane();
+       c1 = new Cybertorium();
+       
+       s1.Start.addActionListener(this);
+        
+        add(s1);
+        
+        
+        
         
         
         
@@ -23,7 +42,26 @@ public class JPanelMain extends JPanel {
     
     
     public void AddPanels(){
-        MainFloor mf = new MainFloor();
-        this.add(mf);
+        add(s1);
+        add(c1);
+        repaint();
+        revalidate();
+        
+       
     }
+    public void RemovePanels(){
+        remove(s1);
+        remove(c1);
+        repaint();
+        revalidate();
+    }
+    
+    
+     public void actionPerformed(ActionEvent al)
+      { Object obj = al.getSource();
+      if(obj == s1.Start)
+          RemovePanels();
+      add(c1);
+      
+      }
 }

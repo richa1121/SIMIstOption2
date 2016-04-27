@@ -18,15 +18,21 @@ public class Frame extends JFrame {
     
     public Frame()
     {
+        super ("IST SIM");
+        JPanelMain p1 = new JPanelMain();
+        getContentPane().add(p1);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize (800, 900);
+        setVisible(true);  
         
-        
-        JFrame f = new JFrame();
-        StartPane sP = new StartPane();
-        f.add(sP);
+        /*JFrame f = new JFrame();
+        Cybertorium c = new Cybertorium();
+        //StartPane sP = new StartPane();
+        f.add(c);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(1200,700);
-        f.setResizable(false);
+        f.setResizable(false); */
         
     }
 }
