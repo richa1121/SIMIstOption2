@@ -19,16 +19,16 @@ import javax.swing.Timer;
  *
  * @author sns5408
  */
-public class Room208 extends JPanel implements ActionListener, KeyListener{
+public class ABP extends JPanel implements ActionListener, KeyListener{
     
     private Image floorImage;
-   private Timer Room208Timer;
+   private Timer ABPTimer;
    private Player player1;
    
-   public Room208(){
+   public ABP(){
        super();
-       Room208Timer = new Timer (50, this);
-       Room208Timer.start();
+       ABPTimer = new Timer (50, this);
+       ABPTimer.start();
        
        
         player1 = new Player();
@@ -55,7 +55,7 @@ public class Room208 extends JPanel implements ActionListener, KeyListener{
     public void actionPerformed(ActionEvent e){
        Object o = e.getSource();
        
-       if(o == Room208Timer){
+       if(o == ABPTimer){
            this.repaint();
        }
    }  

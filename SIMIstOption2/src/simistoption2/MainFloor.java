@@ -34,7 +34,7 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
    private Timer refreshTimer;
    private ArrayList<Room> rooms;
    private Player player1;
-   public JButton Cybertorium, Room208, Room201;
+   public JButton Cybertorium, ABP, Room201;
    
    
    
@@ -55,20 +55,20 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
        player1 = new Player();
      
     Cybertorium = new JButton("Cybertorium");
-    Room208 = new JButton ("Room 208");
+    ABP = new JButton ("Au Bon Pain Cafe");
     Room201= new JButton ("Room 201");
     
     add(Cybertorium);
     Cybertorium.setLocation(0, 50);
     
-    add(Room208);
-    Room208.setLocation(0, 300);
+    add(ABP);
+    ABP.setLocation(0, 300);
     
     add(Room201);
     Room201.setLocation(0, 500);
     
     
-    Room208.setEnabled(false);
+    ABP.setEnabled(false);
     Cybertorium.setEnabled(false);
     Room201.setEnabled(false);
        
@@ -94,7 +94,7 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
                    
                }
           if(!player1.intersects(rooms.get(1))){
-                   Room208.setEnabled(false);
+                   ABP.setEnabled(false);
                    
                }
 if(!player1.intersects(rooms.get(2))){
@@ -108,7 +108,7 @@ if(!player1.intersects(rooms.get(2))){
             Cybertorium.setEnabled(true);
                     }
                if(player1.intersects(rooms.get(1))){
-            Room208.setEnabled(true);
+            ABP.setEnabled(true);
                     }
                 if(player1.intersects(rooms.get(2))){
             Room201.setEnabled(true);
