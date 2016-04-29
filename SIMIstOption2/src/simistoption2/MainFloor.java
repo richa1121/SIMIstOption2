@@ -50,6 +50,8 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
        rooms = new ArrayList<>();
        rooms.add(new Room(3, 0,50));
        rooms.add(new Room(3, 0, 300));
+       rooms.add(new Room(3, 0, 500));
+       
        player1 = new player();
      
     Cybertorium = new JButton("Cybertorium");
@@ -62,9 +64,13 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
     add(Room208);
     Room208.setLocation(0, 300);
     
+    add(Room201);
+    Room201.setLocation(0, 500);
+    
     
     Room208.setEnabled(false);
     Cybertorium.setEnabled(false);
+    Room201.setEnabled(false);
        
        this.addKeyListener(this);
        requestFocusInWindow();
@@ -83,22 +89,33 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
        
        
        for(int i = 0; i<rooms.size();i++){
+          if(!player1.intersects(rooms.get(0))){
+                   Cybertorium.setEnabled(false);
+                   
+               }
+          if(!player1.intersects(rooms.get(1))){
+                   Room208.setEnabled(false);
+                   
+               }
+if(!player1.intersects(rooms.get(2))){
+                   Room201.setEnabled(false);
+                   
+               }
           
-           if(player1.intersects(rooms.get(i))){
-               
-     
-               
+          if(player1.intersects(rooms.get(i))){
+           
               if(player1.intersects(rooms.get(0))){
             Cybertorium.setEnabled(true);
+                    }
+               if(player1.intersects(rooms.get(1))){
+            Room208.setEnabled(true);
+                    }
+                if(player1.intersects(rooms.get(2))){
+            Room201.setEnabled(true);
                     }
            
           }
   
-              
-               if(player1.intersects(rooms.get(1))){
-                   
-                  
-              }        
           }
           
        }
@@ -218,7 +235,7 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
  
            
           ImageIcon floorIcon1 = new ImageIcon("floor tiles.png");
-           floorImage1 = floorIcon1.getImage().getScaledInstance(800, 800, Image.SCALE_DEFAULT);
+           floorImage1 = floorIcon1.getImage().getScaledInstance(1000, 1000, Image.SCALE_DEFAULT);
          
            
          
@@ -266,7 +283,7 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
   
        g.drawImage(door, 0, 50, null); 
        g.drawImage(door, 0, 300, null);
-          
+          g.drawImage(door, 0, 500, null);
           
           
            g.drawImage(couch1, 300, 200, null);
