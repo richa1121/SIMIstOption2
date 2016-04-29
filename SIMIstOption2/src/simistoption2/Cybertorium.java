@@ -24,7 +24,7 @@ import javax.swing.JPanel;
 public class Cybertorium extends JPanel implements ActionListener, KeyListener
 {
     JButton table1, table2, table3, table4, table5;
-    private Player player;
+    private player player;
     double x=0, y=0, velx=0, vely;
     
     public Cybertorium()

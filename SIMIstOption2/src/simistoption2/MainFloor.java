@@ -60,7 +60,10 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
     Cybertorium.setLocation(0, 50);
     
     add(Room208);
+    Room208.setLocation(0, 300);
     
+    
+    Room208.setEnabled(false);
     Cybertorium.setEnabled(false);
        
        this.addKeyListener(this);
@@ -80,18 +83,18 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
        
        
        for(int i = 0; i<rooms.size();i++){
-          if(player1.intersects(rooms.get(i))){
+          
+           if(player1.intersects(rooms.get(i))){
+               
+     
+               
               if(player1.intersects(rooms.get(0))){
             Cybertorium.setEnabled(true);
-                       
-                       
-            
                     }
-              else{
-                  Cybertorium.setEnabled(false);
-              }
-                  
-              }
+           
+          }
+  
+              
                if(player1.intersects(rooms.get(1))){
                    
                   
