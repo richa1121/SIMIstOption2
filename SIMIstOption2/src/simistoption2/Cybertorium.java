@@ -26,7 +26,7 @@ public class Cybertorium extends JPanel implements ActionListener, KeyListener
 {
     JButton table1, table2, table3, table4, table5;
     private Timer CybTimer;
-    private player player1;
+    private Player player1;
     double x=0, y=0, velx=0, vely;
     public JButton mfloor;
     
@@ -49,7 +49,7 @@ public class Cybertorium extends JPanel implements ActionListener, KeyListener
         table4 = new JButton();
         table5 = new JButton();
         
-        player1= new player();
+        player1= new Player();
        
         add(mfloor);
         

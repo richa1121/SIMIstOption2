@@ -2,16 +2,23 @@ package simistoption2;
 
 
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Rectangle;
+import javax.swing.ImageIcon;
 
-public class player extends Rectangle{
-         private int dx;
-         private int dy;
-        public player(){
+public class Player extends Rectangle{
+        private int dx;
+        private int dy;
+        private Image playerImage = new ImageIcon("down1.png").getImage();
+         
+        public Player(){
             this.dx = 0;
             this.dy = 0;
-            
             this.setBounds(100, 50, 30, 30);
+            
+            
+          
+            
         }
         
         public void move(){
@@ -27,9 +34,10 @@ public class player extends Rectangle{
         }
         public void paintComponent(Graphics g){
             move();
-            g.drawRect(x, y, 30, 30);
+            g.drawImage(playerImage, this.x, this.y, null);
         }
-    }
+
+}
    
    
    
