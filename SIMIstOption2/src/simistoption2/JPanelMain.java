@@ -52,7 +52,7 @@ public class JPanelMain extends JPanel implements ActionListener{
         add(c1);
         repaint();
         revalidate();
-        
+   //addition     
        
     }
     public void RemovePanels(){
