@@ -5,15 +5,11 @@
  */
 package simistoption2;
 
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
-
-/**
- *
- * @author Richa
- */
 
 public class Player extends Rectangle{
         private int dx;
@@ -47,4 +43,3 @@ public class Player extends Rectangle{
         }
 
 }
-  
