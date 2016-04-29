@@ -50,6 +50,8 @@ public class JPanelMain extends JPanel implements ActionListener{
         
         
     }
+   
+    
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
