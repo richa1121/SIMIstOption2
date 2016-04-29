@@ -34,7 +34,7 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
    private Timer refreshTimer;
    private ArrayList<Room> rooms;
    private player player1;
-   private JButton Cybertorium, Room208, Room201;
+   public JButton Cybertorium, Room208, Room201;
    
    
    
@@ -58,6 +58,8 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
     
     add(Cybertorium);
     Cybertorium.setLocation(0, 50);
+    
+    add(Room208);
     
     Cybertorium.setEnabled(false);
        
