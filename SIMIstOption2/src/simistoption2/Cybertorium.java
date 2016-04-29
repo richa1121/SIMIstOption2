@@ -104,23 +104,37 @@ public class Cybertorium extends JPanel implements ActionListener, KeyListener
            this.repaint();
        }
    }  
-    public void keyPressed(KeyEvent e){
+     public void keyPressed(KeyEvent e){
        if(e.getKeyCode()== KeyEvent.VK_LEFT){
+        if(player1.x < 0){
+           player1.x=0;
+       } 
         player1.setDx(-20);
+        
        
         System.out.println("Typed");
        }
        
        else if(e.getKeyCode() ==KeyEvent.VK_RIGHT){
+           if(player1.x > 850){
+           player1.x=850;
+       } 
            player1.setDx(20);
        }
         else if(e.getKeyCode() ==KeyEvent.VK_UP){
+         if(player1.y < -10){
+           player1.y=-10;
+       }    
            player1.setDy(-20);
         }
             else if(e.getKeyCode() ==KeyEvent.VK_DOWN){
+                 if(player1.y > 700){
+           player1.y=630;
+       }    
            player1.setDy(20);
             }
     }   
+      
     
     public void keyReleased(KeyEvent e){
         player1.setDx(0);

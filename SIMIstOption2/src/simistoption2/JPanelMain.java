@@ -49,7 +49,7 @@ public class JPanelMain extends JPanel implements ActionListener{
         
         
     }
-    
+   
     
     
     public void AddPanels(){

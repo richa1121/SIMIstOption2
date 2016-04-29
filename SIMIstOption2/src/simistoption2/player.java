@@ -10,6 +10,7 @@ public class player extends Rectangle{
         public player(){
             this.dx = 0;
             this.dy = 0;
+            
             this.setBounds(100, 50, 30, 30);
         }
         
