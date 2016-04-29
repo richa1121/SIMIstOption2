@@ -33,6 +33,9 @@ public class JPanelMain extends JPanel implements ActionListener{
       
        
        s1.Start.addActionListener(this);
+       
+       c1.mfloor.addActionListener(this);
+       
        m1.Cybertorium.addActionListener(this);
        m1.Room201.addActionListener(this);
        
@@ -59,6 +62,7 @@ public class JPanelMain extends JPanel implements ActionListener{
         remove(s1);
         remove(m1);
         remove(c1);
+        
         repaint();
         revalidate();
     }
@@ -72,7 +76,7 @@ public class JPanelMain extends JPanel implements ActionListener{
     
      public void actionPerformed(ActionEvent al)
       { Object obj = al.getSource();
-      if(obj == s1.Start){
+      if( (obj == s1.Start) || (obj == c1.mfloor)) {
           
       
           RemovePanels();
@@ -84,8 +88,9 @@ public class JPanelMain extends JPanel implements ActionListener{
        if(obj == m1.Cybertorium){
            RemovePanels();
            add(c1);
+         
            c1.requestFocusInWindow();
-           m1.setFocusable(true);
+           c1.setFocusable(true);
            
        }
       
