@@ -6,8 +6,11 @@
 package simistoption2;
 
 import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -43,14 +46,19 @@ public class JPanelMain extends JPanel implements ActionListener{
        
         
         add(s1);
-        
-        
        
         
         
     }
     
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        
+        ImageIcon floor = new ImageIcon("IST_Building_PSU.png");
+        int x = 0, y = 0;
+        floor.paintIcon(this, g, x, y);
     
+    }
     
     public void AddPanels(){
         add(s1);

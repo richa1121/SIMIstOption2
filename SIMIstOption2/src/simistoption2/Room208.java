@@ -23,7 +23,7 @@ public class Room208 extends JPanel implements ActionListener, KeyListener{
     
     private Image floorImage;
    private Timer Room208Timer;
-   private player player1;
+   private Player player1;
    
    public Room208(){
        super();
@@ -31,7 +31,7 @@ public class Room208 extends JPanel implements ActionListener, KeyListener{
        Room208Timer.start();
        
        
-        player1 = new player();
+        player1 = new Player();
         
         
          this.addKeyListener(this);
