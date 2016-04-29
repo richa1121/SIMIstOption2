@@ -26,7 +26,7 @@ import javax.swing.Timer;
 
 /**
  *
- * @author matthewtucker
+ * @author Richa
  */
 public class MainFloor extends JPanel implements ActionListener, KeyListener {
   
