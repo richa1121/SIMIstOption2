@@ -22,7 +22,7 @@ public class Frame extends JFrame {
         JPanelMain p1 = new JPanelMain();
         getContentPane().add(p1);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize (800, 900);
+        setSize (900, 700);
         setVisible(true);  
         
         /*JFrame f = new JFrame();
