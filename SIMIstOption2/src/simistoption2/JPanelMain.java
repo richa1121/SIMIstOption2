@@ -50,13 +50,14 @@ public class JPanelMain extends JPanel implements ActionListener{
         
         
     }
-    
+
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         
         ImageIcon floor = new ImageIcon("IST_Building_PSU.png");
         int x = 0, y = 0;
         floor.paintIcon(this, g, x, y);
+
     
     }
     
