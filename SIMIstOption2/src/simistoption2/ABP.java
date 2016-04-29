@@ -18,6 +18,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -31,6 +32,8 @@ public class ABP extends JPanel implements ActionListener, KeyListener{
     private Image floorImage;
    private Timer ABPTimer;
    private Player player1;
+       public JButton mfloor;
+
    
    public static final int COUNTERWIDTH = 160;
     public static final int COUNTERHEIGHT = 192;
@@ -68,21 +71,14 @@ public class ABP extends JPanel implements ActionListener, KeyListener{
        ABPTimer.start();
 
         player1 = new Player();
+        mfloor= new JButton("Return to Floor 1");
+        add(mfloor);
 
         this.addKeyListener(this);
         requestFocusInWindow();
         this.setFocusable(true);
    }
        
-    /*@Override
-    protected void paintComponent(Graphics g) {
-        setPreferredSize(getParent().getSize());
-        super.paintComponent(g);
-        double playerHeight = getParent().getHeight() * .125;
-        double playerWidth = getParent().getWidth() * .06;
-        g.drawImage(new ImageIcon("floor.png").getImage(), 0, 0, getParent().getWidth(), getParent().getHeight(), null);
-    }*/
-   
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
@@ -93,16 +89,6 @@ public class ABP extends JPanel implements ActionListener, KeyListener{
         
         
     }
-   
-    /*public void paintComponent(Graphics g){
-        super.paintComponent(g);
-         g.clearRect(0, 0, this.getWidth(), this.getHeight());
-        ImageIcon Icon = new ImageIcon("floor tiles.jpg");
-        g.drawImage(Icon.getImage(), 0, 0, this);
-        player1.paintComponent(g);
-        
-        
-    }*/
     
     public void actionPerformed(ActionEvent e){
        Object o = e.getSource();

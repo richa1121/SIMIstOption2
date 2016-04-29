@@ -91,13 +91,12 @@ public class MainFloor extends JPanel implements ActionListener, KeyListener {
        for(int i = 0; i<rooms.size();i++){
           if(!player1.intersects(rooms.get(0))){
                    Cybertorium.setEnabled(false);
-                   
                }
           if(!player1.intersects(rooms.get(1))){
                    ABP.setEnabled(false);
                    
                }
-if(!player1.intersects(rooms.get(2))){
+        if(!player1.intersects(rooms.get(2))){
                    Room201.setEnabled(false);
                    
                }
@@ -105,14 +104,14 @@ if(!player1.intersects(rooms.get(2))){
           if(player1.intersects(rooms.get(i))){
            
               if(player1.intersects(rooms.get(0))){
-            Cybertorium.setEnabled(true);
-                    }
+                    Cybertorium.setEnabled(true);
+                }
                if(player1.intersects(rooms.get(1))){
-            ABP.setEnabled(true);
-                    }
+                    ABP.setEnabled(true);
+                }
                 if(player1.intersects(rooms.get(2))){
-            Room201.setEnabled(true);
-                    }
+                    Room201.setEnabled(true);
+                }
            
           }
   

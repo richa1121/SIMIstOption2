@@ -91,33 +91,24 @@ public class JPanelMain extends JPanel implements ActionListener{
      public void actionPerformed(ActionEvent al)
       { Object obj = al.getSource();
       if( (obj == s1.Start) || (obj == c1.mfloor)) {
-          
-      
-          RemovePanels();
-      add(m1);
-       m1.requestFocusInWindow();
-       m1.setFocusable(true);
+            RemovePanels();
+            add(m1);
+            m1.requestFocusInWindow();
+            m1.setFocusable(true);
      
       }
        if(obj == m1.Cybertorium){
            RemovePanels();
            add(c1);
-         
            c1.requestFocusInWindow();
            c1.setFocusable(true);
-           
        }
+       
         if(obj == m1.ABP){
            RemovePanels();
            add(r1);
-         
            r1.requestFocusInWindow();
            r1.setFocusable(true);
-           
        }
-      
-      }
-   
-     
-     
+    }
 }

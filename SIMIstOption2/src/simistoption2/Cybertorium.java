@@ -40,7 +40,7 @@ public class Cybertorium extends JPanel implements ActionListener, KeyListener
        
        
       
-       mfloor= new JButton(" Return to floor 1");
+       mfloor= new JButton("Return to Floor 1");
        
        
         table1 = new JButton();
