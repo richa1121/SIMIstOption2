@@ -6,6 +6,7 @@
 package simistoption2;
 
 import java.awt.Dimension;
+import java.awt.event.WindowFocusListener;
 import javax.swing.JFrame;
 
 /**
@@ -19,10 +20,14 @@ public class Frame extends JFrame {
     public Frame()
     {
         super ("IST SIM");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanelMain p1 = new JPanelMain();
         getContentPane().add(p1);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize (800, 900);
+        this.pack();
+         p1.setFocusable(true);
+        p1.requestFocusInWindow();
+        
+        setSize (600, 600);
         setVisible(true);  
         
         /*JFrame f = new JFrame();

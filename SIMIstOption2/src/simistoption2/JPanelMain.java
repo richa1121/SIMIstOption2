@@ -8,6 +8,7 @@ package simistoption2;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -25,16 +26,18 @@ public class JPanelMain extends JPanel implements ActionListener{
         super();
         
          setLayout(new BorderLayout());
+         setFocusable(true);
         s1 = new StartPane();
        c1 = new Cybertorium();
+       m1 = new MainFloor();
+      
        
        s1.Start.addActionListener(this);
         
         add(s1);
         
         
-        
-        
+       
         
         
     }
@@ -55,13 +58,24 @@ public class JPanelMain extends JPanel implements ActionListener{
         repaint();
         revalidate();
     }
+    public void SwitchtoCybertorium(){
+       remove(m1);
+        add(c1);
+        repaint();
+        revalidate();
+    }
     
     
      public void actionPerformed(ActionEvent al)
       { Object obj = al.getSource();
       if(obj == s1.Start)
           RemovePanels();
-      add(c1);
+      add(m1);
+       m1.requestFocusInWindow();
+       m1.setFocusable(true);
       
+     
       }
+     
+     
 }

@@ -5,11 +5,15 @@
  */
 package simistoption2;
 
+import java.awt.event.WindowFocusListener;
+import javax.swing.JTextField;
+import java.awt.event.*;
+
 /**
  *
  * @author Richa
  */
-public class SIMIstOption2 {
+public class SIMIstOption2  {
 
     /**
      * @param args the command line arguments
@@ -17,7 +21,16 @@ public class SIMIstOption2 {
     public static void main(String[] args) {
         //suzanne
        Frame f1 =new Frame();
+       
+   
+  }
+
+
+
+       
+       
+       
         // TODO code application logic here
-    }
+    
     
 }
