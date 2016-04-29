@@ -23,11 +23,8 @@ public class Frame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanelMain p1 = new JPanelMain();
         getContentPane().add(p1);
-        this.pack();
-         p1.setFocusable(true);
-        p1.requestFocusInWindow();
-        
-        setSize (600, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize (900, 700);
         setVisible(true);  
         
         /*JFrame f = new JFrame();
