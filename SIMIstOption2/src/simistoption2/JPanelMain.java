@@ -46,6 +46,9 @@ public class JPanelMain extends JPanel implements ActionListener{
        m1.Room201.addActionListener(this);
        m1.ABP.addActionListener(this);
        
+      r1.mfloor.addActionListener(this);
+      r2.mfloor.addActionListener(this);
+       
         
         add(s1);
        
@@ -120,6 +123,19 @@ public class JPanelMain extends JPanel implements ActionListener{
            add(r2);
            r2.requestFocusInWindow();
            r2.setFocusable(true);
+       }
+        if(obj == r1.mfloor){
+           RemovePanels();
+           add(m1);
+           m1.requestFocusInWindow();
+           m1.setFocusable(true);
+       }
+        
+        if(obj == r2.mfloor){
+           RemovePanels();
+           add(m1);
+           m1.requestFocusInWindow();
+           m1.setFocusable(true);
        }
     }
 }
