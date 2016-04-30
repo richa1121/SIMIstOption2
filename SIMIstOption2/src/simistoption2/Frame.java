@@ -5,15 +5,9 @@
  */
 package simistoption2;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Image;
 import java.awt.event.WindowFocusListener;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 /**
  *
@@ -21,24 +15,18 @@ import javax.swing.JLabel;
  */
 public class Frame extends JFrame {
     
-    JButton b1;
-    JLabel l1;
+
     
     public Frame()
     {
         super ("IST SIM");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
         JPanelMain p1 = new JPanelMain();
-        JLabel label = new JLabel();
-        label.setIcon(new ImageIcon("IST_Building_PSU.jpg"));
-        getContentPane().setLayout(new FlowLayout ());
-        getContentPane().add(label);
+        getContentPane().add(p1);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize (675, 600);
-        setResizable(true);
+        setResizable(false);
         setVisible(true);  
-        
         
         /*JFrame f = new JFrame();
         Cybertorium c = new Cybertorium();
