@@ -5,6 +5,8 @@
  */
 package simistoption2;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -25,14 +27,15 @@ public class StartPane extends JPanel{
     public StartPane(){
        
         
+        Start= new JButton("Start Game");
+        //Start.setLocation(600, 550);
         
-        Start= new JButton("Start");
-        
+        //Start.setBounds(60, 400, 220, 30);
         add(Start);
         
                    
-        ImageIcon floorIcon1 = new ImageIcon("IST_Building_PSU.png");
-        floorImage1 = floorIcon1.getImage().getScaledInstance(1000, 1000, Image.SCALE_DEFAULT);
+        //ImageIcon floorIcon1 = new ImageIcon("IST_Building_PSU.png");
+        //floorImage1 = floorIcon1.getImage().getScaledInstance(1000, 1000, Image.SCALE_DEFAULT);
          
     }
 
